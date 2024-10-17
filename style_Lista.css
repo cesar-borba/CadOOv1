@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* tornar borda 0*/
+  font-family: "Poppins", sans-serif;
+ 
+}
+
+body {
+   background: green;
+}
+
+/*css padrao para tds container*/
+
+/*css do menu de cima*/
+nav {
+  display: flex;
+  margin: 0 auto;
+  max-width: 100%;
+   background: #37d77a;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, .15);
+  justify-content: center;
+}
+
+nav::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav ul li {
+  float: left;
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  color: rgba(255, 255, 255, .9);
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  transition: all .3s ease-in-out;
+
+
+
+  border-radius: 30px;
+  background: lightgrey;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background: rgba(0, 0, 0, .15);
+}
+
+nav ul li a:focus {
+  color: white;
+}
+
+nav ul li a:not(:only-child)::after {
+  padding-left: 4px;
+  content: ' ▾';
+}
+
+nav ul li ul li {
+  min-width: 190px;
+}
+
+nav ul li ul li a {
+  background: transparent;
+  color: #555;
+  border-bottom: 1px solid #DDE0E7;
+}
+
+nav ul li ul li a:hover,
+nav ul li ul li a:focus {
+  width: 190px;
+  height: 254px;
+  border-radius: 30px;
+  background: lightgrey;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+  color: #111;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background: #1e8449;
+  box-shadow: 0 4px 10px rgba(10, 20, 30, .4);
+  top: 100%; /* Posiciona o dropdown logo abaixo do item de menu pai */
+  left: 0;
+}
+
+nav ul li:hover .dropdown {
+  display: block; /* Exibe o dropdown quando o item de menu é hover */
+}
+
+/* Adiciona uma transição suave para o dropdown aparecer */
+.dropdown li {
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+
+/*fim do css do menu de cima*/
+
+/* Tela Principal*/
+.tela_principal{
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 98%;
+    height: 96vh;
+    margin: 2vh;
+
+    border-radius: 15px;
+   
+}
+
+/* css do Corpo */
+.container_Principal {
+  display: flex;
+  justify-content: space-between; /* Espaço entre os containers */
+  align-items: flex-start;
+   width: 100%; 
+   height: 100%;
+  padding: 20px;
+  gap: 5px;
+
+  border-radius: 15px;
+  
+}
+
+#Menu_Lateral, #Principal {
+
+  color: white;
+  height: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+
+    border-radius: 15px;
+}
+
+#Menu_Lateral{
+  position: relative;
+   background-color: black;
+}
+#Menu_Lateral ul li {
+  position: relative;
+  left: 0;
+  color: white;
+  list-style: none;
+  margin: 1px 0;
+  border-left: 2px solid #f50057;
+  transition: 0.5s;
+  cursor: pointer;
+}
+#Menu_Lateral ul li:hover {
+  left: 10px;
+}
+#Menu_Lateral ul li span {
+  position: relative;
+  padding: 8px;
+  padding-left: 12px;
+  display: inline-block;
+  z-index: 1;
+  transition: 0.5s;
+}
+#Menu_Lateral ul li:hover span {
+  color: #111;
+  z-index: 1;
+
+}
+#Menu_Lateral ul li:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: red;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0ms;
+}
+#Menu_Lateral ul li:hover:before {
+  transform: scaleX(1);
+}
+
+#Principal {
+   width: 90%; /* Largura de cada container */
+  background-color: #e8e8e8;
+  color: black;
+}

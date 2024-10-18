@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* tornar borda 0*/
+  font-family: "Poppins", sans-serif;
+
+}
+
+body {
+   background: green;
+}
+
+#divlogo{
+  display: flex;
+  align-items: center;
+   justify-content: center;
+}
+
+#logo{
+
+   width: 200%;
+  height: auto; /* Mantém a proporção da imagem */
+
+}
+
+/* Tela Principal*/
+.tela_principal{
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 98%;
+    height: 96vh;
+    margin: 2vh;
+
+    border-radius: 15px;
+
+}
+
+/* css do Corpo */
+.container_Principal {
+  display: flex;
+  justify-content: space-between; /* Espaço entre os containers */
+  align-items: flex-start;
+   width: 100%; 
+   height: 100%;
+  padding: 20px;
+  gap: 5px;
+
+  border-radius: 15px;
+
+}
+
+#Menu_Lateral, #Principal {
+
+  height: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+
+    border-radius: 15px;
+}
+#Menu_Lateral{
+  text-align: center;
+
+  color: #111;
+  position: relative;
+   background-color: #c2dcbb;
+}
+#Menu_Lateral ul li {
+  position: relative;
+  left: 0;
+  list-style: none;
+  margin: 15px 0;
+  transition: 0.5s;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  
+  
+}
+#Menu_Lateral ul li:hover {
+  left: 10px;
+}
+
+.botao {
+  position: relative;
+  padding: 8px;
+  padding-left: 12px;
+  display: inline-block;
+  z-index: 1;
+  transition: 0.5s;
+  width: 20vh;
+  border-radius: 20px;
+  
+}
+.botao:hover {
+  color: #111;
+  z-index: 1;
+  
+
+}
+.botao:before {
+  color: #111;
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0ms;
+  
+  
+}
+.botao:hover:before {
+  transform: scaleX(1);
+}
+
+#Principal {
+   width: 90%; 
+  background-color: #e8e8e8;
+  color: black;
+}
+#Principal ul li{
+ margin: 15px 0;
+   list-style: none;
+}
+#Principal input, select{
+  background-color: #d9d9d9;
+  color: black;
+  height: 7vh;
+  border-radius: 5px;
+}
+
+#cpf {
+  width: 20vh;
+}
+.nome {
+  width: 70vh;
+}

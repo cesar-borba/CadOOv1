@@ -8,6 +8,17 @@ function mascaraCPF(cpf) {
     cpf.value = cpf.value.replace(/(\d{3})(\d)/, "$1.$2");
     cpf.value = cpf.value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
 }
+
+// ** CEP
+function mascaraCEP(cep) {
+    // Remove qualquer caractere que não seja número
+    cep.value = cep.value.replace(/\D/g, "");
+
+    // Adiciona os pontos e o traço no CPF
+       //cep.value = cep.value.replace(/(\d{})(\d)/, "$1.$2");
+      // cep.value = cep.value.replace(/(\d{3})(\d)/, "$1.$2");
+        cep.value = cep.value.replace(/(\d{5})(\d{3})$/, "$1-$2");
+}
 // ** fim CPF
 
 //Sexo
@@ -85,3 +96,9 @@ function preencherEstados() {
 
 
 // ** fim Estado
+
+// ** Limpar campo
+function LimparCampos() {
+    var nome = $("#nome");
+        nome.val("");
+}

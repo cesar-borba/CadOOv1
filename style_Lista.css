@@ -104,7 +104,7 @@ nav ul li:hover .dropdown {
 
 /* Adiciona uma transição suave para o dropdown aparecer */
 .dropdown li {
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
 
@@ -149,7 +149,6 @@ nav ul li:hover .dropdown {
 
     border-radius: 15px;
 }
-
 #Menu_Lateral{
   position: relative;
    background-color: black;
@@ -230,7 +229,6 @@ nav ul li:hover .dropdown {
   transition: 0.5s;
   pointer-events: none;
 }
-.inputbox input:valid ~span,
 .inputbox input:focus ~span {
   color: green;
   transform: translateX(-10px) translateY(-34px);
@@ -248,7 +246,6 @@ nav ul li:hover .dropdown {
   pointer-events: none;
   z-index: 9;
 }
-.inputbox input:valid ~i,
 .inputbox input:focus ~i {
   height: 44px;
 }

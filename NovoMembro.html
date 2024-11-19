@@ -20,8 +20,6 @@
 
 
       <!-- Menu lateral -->
-
-
       <div id="Menu_Lateral">
         <!--logo-->
         <div id="divlogo"><img id="logo" src="imagens/cadoo.png" alt=""> </div>
@@ -33,7 +31,7 @@
 
 
         <ul>
-          <li><button class="botao">Limpar</button></li>
+          <li><button class="botao" onclick="LimparCampos()">Limpar</button></li>
           <li><button class="botao">Salvar</button></li>
           <li><button class="botao">Sair</button></li>
 
@@ -52,18 +50,18 @@
           <ul>
 
             <!-- linha nome -->
-            <li class = labelinput >
+            <li class=labelinput>
               <!-- nome -->
               <label for="nome">Nome:</label>
-              <input type="text" class ="nome" id="nome" placeholder="Digite seu nome" autofocus="true" />
-                
+              <input type="text" class="textgrand" id="nome" placeholder="Digite seu nome" autofocus="true" />
+
               <!-- sobrenome -->
-              
+
               <label for="sobrenome">Sobrenome:</label>
-              <input type="text" class= "nome" id="sobrenome" placeholder="Digite seu sobrenome"/>
-                
+              <input type="text" class="textgrand" id="sobrenome" placeholder="Digite seu sobrenome" />
+
             </li>
-            
+
             <!-- CPF -->
             <li>
               <label for="cpf"> CPF: </label>
@@ -75,39 +73,108 @@
               <!-- nasc -->
               <label for="nasc"> Data de nascimento: </label>
               <input type="date" id="nasc">
-            
+
               <!-- sexo -->
               <label for="sexo"> Sexo: </label>
-              <select id = "sexo">
-                  <option value="" disabled selected>Escolha seu Sexo</option>
+              <select id="sexo">
+                <option value="" disabled selected>Escolha seu Sexo</option>
               </select>
 
               <!-- Estado Civil -->
               <label for="civil"> Estado Civil: </label>
-              <select id = "civil">
-                  <option value="" disabled selected>Escolha seu Estado Civil</option>
+              <select id="civil">
+                <option value="" disabled selected>Escolha seu Estado Civil</option>
               </select>
-                
+
             </li>
 
             <!-- Endereço -->
             <li>
+
+              <!-- CEP -->
+              <label for="cep"> CEP: </label>
+              <input type="text" id="cep" maxlength="9" placeholder="00000-000" oninput="mascaraCEP(this)">
+
+              <!-- Rua -->
+              <label for="rua">Rua:</label>
+              <input type="text" class="textgrand" id="rua" placeholder="Digite sua rua" />
+
+              <!-- Número -->
+              <label for="numEnd"> Número: </label>
+              <input type="number" id="numEnd" placeholder="Digite o número">
+
+              <!-- Complemento -->
+              <br>
+              <br>
+              <label for="complemento">Complemento:</label>
+              <input type="text" class="textgrand" id="complemento" placeholder="Digite complemento (se necessário)" />
+
+              <!-- Estado -->
               <label for="estado"> Estado: </label>
               <select id="estado">
-                  <option value="" disabled selected>Escolha seu estado</option>
+                <option value="" disabled selected>Escolha seu estado</option>
               </select>
 
             </li>
-            
 
-            
-            </ul>
-            <!-- fim Formulario -->
-            </div>
+            <!-- Contato -->
+            <li>
+              <!-- Telefone -->
+              <label for="telefone"> Telefone: </label>
+              <input type="tel" id="telefone" placeholder="(00) 00000-0000" />
 
-            
+              <!-- Email -->
+              <label for="email"> Email: </label>
+              <input type="email" class="textgrand" id="email" placeholder="Digite seu email" />
 
-        
+
+
+            </li>
+
+            <!-- Parentesco -->
+            <li>
+              <ul>
+                
+              
+              <!-- nome mãe -->
+              <li>
+                <label for="nomeMae">Nome completo da mãe:</label>
+              <input type="text" class="textgrand" id="nomeMae" placeholder="Digite o nome completo da sua mãe" />
+                </li>
+                
+              <!-- nome pai -->
+                <li>
+              <label for="nomePai">Nome completo do pai:</label>
+              <input type="text" class="textgrand" id="nomePai" placeholder="Digite o nome completo do seu pai" />
+                  </li>
+
+                <!--Filho(s)-->
+                <li>
+                  
+                  <div class="checkbox-wrapper-10">
+                    
+                    <input checked="" type="checkbox" id="filho" class="tgl tgl-flip">
+                    <label for="filho" data-tg-on="Possui Filho(s)" data-tg-off="Não Possui Filho" class="tgl-btn"></label>
+                  </div>
+
+                </li>
+                
+              
+              </ul>
+              
+
+                
+              
+            </li> 
+
+
+          </ul>
+          <!-- fim Formulario -->
+        </div>
+
+
+
+
 
 
 

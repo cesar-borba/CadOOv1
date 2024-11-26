@@ -32,8 +32,8 @@ body {
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  width: 98%;
-  height: 96vh;
+  width: auto;
+  height: auto;
   margin: 2vh;
 
   border-radius: 15px;
@@ -149,7 +149,7 @@ select {
 }
 
 .textgrand {
-  width: 70vh;
+  width: 75%;
 }
 
 

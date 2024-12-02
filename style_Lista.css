@@ -71,7 +71,7 @@ nav ul li a:not(:only-child)::after {
 }
 
 nav ul li ul li {
-  min-width: 190px;
+  min-width: 19px;
 }
 
 nav ul li ul li a {
@@ -98,7 +98,10 @@ nav ul li ul li a:focus {
   box-shadow: 0 4px 10px rgba(10, 20, 30, .4);
   top: 100%; /* Posiciona o dropdown logo abaixo do item de menu pai */
   left: 0;
-  z-index: 9999; /* Garante que o dropdown fique sobre outros itens */
+  z-index: 9999;
+  border-radius: 30px;
+  
+  /* Garante que o dropdown fique sobre outros itens */
 }
 
 nav ul li:hover .dropdown {

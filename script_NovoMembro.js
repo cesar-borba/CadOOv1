@@ -157,3 +157,11 @@ function LimparCampos() {
         nomePai.value = '';
     
 }
+// ** fim Limpar campo
+
+
+// ** função voltar para pagina principal
+function Sair() {
+     window.location.href = 'Principal.html';
+}
+// ** fim função voltar

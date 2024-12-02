@@ -1,13 +1,14 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* tornar borda 0*/
+  box-sizing: border-box;
+  /* tornar borda 0*/
   font-family: "Poppins", sans-serif;
- 
+
 }
 
 body {
-   background: green;
+  background: green;
 }
 
 /*css padrao para tds container*/
@@ -17,7 +18,7 @@ nav {
   display: flex;
   margin: 0 auto;
   max-width: 100%;
-   background: #37d77a;
+  background: #37d77a;
   box-shadow: 0 3px 15px rgba(0, 0, 0, .15);
   justify-content: center;
 }
@@ -66,7 +67,7 @@ nav ul li a:focus {
 
 nav ul li a:not(:only-child)::after {
   padding-left: 4px;
-  content: ' ▾';
+  content: '▾';
 }
 
 nav ul li ul li {
@@ -82,11 +83,12 @@ nav ul li ul li a {
 nav ul li ul li a:hover,
 nav ul li ul li a:focus {
   width: 190px;
-  height: 254px;
+  height: 15hv;
   border-radius: 30px;
   background: lightgrey;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
   color: #111;
+  position: relative; /* Alteração de absolute para relative para evitar sobreposição */
 }
 
 .dropdown {
@@ -96,10 +98,12 @@ nav ul li ul li a:focus {
   box-shadow: 0 4px 10px rgba(10, 20, 30, .4);
   top: 100%; /* Posiciona o dropdown logo abaixo do item de menu pai */
   left: 0;
+  z-index: 9999; /* Garante que o dropdown fique sobre outros itens */
 }
 
 nav ul li:hover .dropdown {
-  display: block; /* Exibe o dropdown quando o item de menu é hover */
+  display: block;
+  /* Exibe o dropdown quando o item de menu é hover */
 }
 
 /* Adiciona uma transição suave para o dropdown aparecer */
@@ -112,60 +116,66 @@ nav ul li:hover .dropdown {
 /*fim do css do menu de cima*/
 
 /* Tela Principal*/
-.tela_principal{
-    background-color: beige;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    width: 98%;
-    height: 96vh;
-    margin: 2vh;
+.tela_principal {
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 98%;
+  height: 96vh;
+  margin: 2vh;
 
-    border-radius: 15px;
-   
+  border-radius: 15px;
+
 }
 
 /* css do Corpo */
 .container_Principal {
   display: flex;
-  justify-content: space-between; /* Espaço entre os containers */
+  justify-content: space-between;
+  /* Espaço entre os containers */
   align-items: flex-start;
-   width: 100%; 
-   height: 100%;
+  width: 100%;
+  height: 100%;
   padding: 20px;
   gap: 5px;
 
   border-radius: 15px;
-  
+
 }
 
-#Menu_Lateral, #Principal {
+#Menu_Lateral,
+#Principal {
 
   color: white;
   height: 100%;
   padding: 20px;
   border: 1px solid #ccc;
 
-    border-radius: 15px;
+  border-radius: 15px;
 }
-#Menu_Lateral{
+
+#Menu_Lateral {
   position: relative;
-   background-color: black;
+  background-color: green;
 }
+
 #Menu_Lateral ul li {
   position: relative;
   left: 0;
   color: white;
   list-style: none;
   margin: 1px 0;
-  border-left: 2px solid #f50057;
+  border-left: 2px solid rgb(255, 248, 220);
   transition: 0.5s;
   cursor: pointer;
 }
+
 #Menu_Lateral ul li:hover {
   left: 10px;
 }
+
 #Menu_Lateral ul li span {
   position: relative;
   padding: 8px;
@@ -174,37 +184,42 @@ nav ul li:hover .dropdown {
   z-index: 1;
   transition: 0.5s;
 }
+
 #Menu_Lateral ul li:hover span {
   color: #111;
   z-index: 1;
 
 }
+
 #Menu_Lateral ul li:before {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  background: red;
+  background: rgb(255, 248, 220);
   transform: scaleX(0);
   transform-origin: left;
   transition: 0ms;
 }
+
 #Menu_Lateral ul li:hover:before {
   transform: scaleX(1);
 }
 
 #Principal {
-   width: 90%; /* Largura de cada container */
+  width: 90%;
+  /* Largura de cada container */
   background-color: #e8e8e8;
   color: black;
 }
 
 /* caixa de pesquisa*/
-/* From Uiverse.io by VijinV */ 
+/* From Uiverse.io by VijinV */
 .inputbox {
   position: relative;
   width: 90%;
 }
+
 .inputbox input {
   position: relative;
   width: 100%;
@@ -219,6 +234,7 @@ nav ul li:hover .dropdown {
   transition: 0.5s;
   z-index: 10;
 }
+
 .inputbox span {
   position: absolute;
   left: 0;
@@ -229,11 +245,13 @@ nav ul li:hover .dropdown {
   transition: 0.5s;
   pointer-events: none;
 }
-.inputbox input:focus ~span {
+
+.inputbox input:focus~span {
   color: green;
   transform: translateX(-10px) translateY(-34px);
-  font-size: 0,75em;
+  font-size: 0, 75em;
 }
+
 .inputbox i {
   position: absolute;
   left: 0;
@@ -246,7 +264,8 @@ nav ul li:hover .dropdown {
   pointer-events: none;
   z-index: 9;
 }
-.inputbox input:focus ~i {
+
+.inputbox input:focus~i {
   height: 44px;
 }
 

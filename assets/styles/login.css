@@ -11,7 +11,7 @@
     --cor-primaria: #133E87;
     --cor-secundaria: #F3F3E0;
     --cor-terciaria: #608BC1;
-    --botao-selecionado:#041B42;
+    --botao-selecionado: #041B42;
 
     --cor-branca: #FFFFFF;
 
@@ -42,7 +42,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /*importante para o body estar presente em toda a tela*/
+    min-height: 100vh;
+    /*importante para o body estar presente em toda a tela*/
     width: 100%;
 }
 
@@ -77,19 +78,24 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;}
+    width: 100%;
+}
 
 input {
     padding: 15px;
-    font-size: 0.95rem; /*15px em 'rem'*/
+    font-size: 0.95rem;
+    /*15px em 'rem'*/
     margin-bottom: 20px;
     margin-top: 5px;
     border-radius: 10px;
-    transition: all linear 160ms; /*transição ao surgir o input*/
-    outline: none; /*ao input ser selecionado, este não apresenta uma linha ao redor*/
+    transition: all linear 160ms;
+    /*transição ao surgir o input*/
+    outline: none;
+    /*ao input ser selecionado, este não apresenta uma linha ao redor*/
 }
 
-#email, #senha {
+#email,
+#senha {
     color: var(--cor-primaria);
     border: 2px solid gray;
 }
@@ -128,4 +134,3 @@ a:hover {
     padding: 10px;
     color: gray;
 }
-

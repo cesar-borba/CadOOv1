@@ -1,31 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-body {
-    font-family: 'Inter', sans-serif;
+* {
     margin: 0;
     padding: 0;
-    color: #023047;
-     background-color: #1e8449;
-}
-#divlogo{
-  display: flex;
-  align-items: center;
-   justify-content: center;
 }
 
-#logo{
-  
-   width: 200%;
-  height: auto; /* Mantém a proporção da imagem */
-  
-}
-.login {
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1e8449;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
     justify-content: center;
-    width: 100%;
+}
+
+.login-page {
+    display: flex;
+    color: #023047;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* align-content: center; */
+    /* justify-content: center; */
+    width: 50%;
     height: 100%;
     background-color: #1e8449;
 }
@@ -34,14 +28,26 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #f5f5dc;
-    border: 2px solid #413e3e;
-    border-radius: 7px;
+    /* border: 2px solid #413e3e; */
+    /* border-radius: 7px; */
     padding: 8vh;
-    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+    /* box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4); */
     margin: 15px;
-   gap: 5px;
+    gap: 5px;
 }
 
+/* .logotipo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+} */
+
+#logotipo{
+    width: 50%;
+    max-width: 200px;
+    height: auto; /* Mantém a proporção da imagem */
+}
 
 .formLogin input {
     padding: 15px;
@@ -54,13 +60,10 @@ body {
     outline: none;
 }
 
-
-
 .formLogin label {
-
     display: flex;
     align-items: center;
-     justify-content: center;
+    justify-content: center;
     font-size: 10px;
     font-weight: 600;
 }

@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #023047;
+    background-color: #04762c;
+}
+
+a{
+/* tirar sublinhado */
+ text-decoration: none;
+}
+
+#divlogo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo{
+
+   width: 200%;
+  height: auto; /* Mantém a proporção da imagem */
+
+}
+
+.tela_principal{
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 98hv;
+    height: 96vh;
+    margin: 2vh;
+    border-radius: 15px;
+    
+}
+
+.menu {
+    background-color: #bfc4b6;
+    display: flex;
+    flex-direction: row ;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 10px; /* Espaço vão entre as opções */
+    width: 80%;
+    height: 90vh;
+    margin: 5vh;
+    border-radius: 15px;
+}
+
+.opcao {
+    background-color: rgba(76, 175, 80, 0.3); /* Cor de fundo e opacidade */
+    color: white; /* Cor do texto */
+    padding: 5hv; /* Espaçamento interno */
+    margin-bottom: 10hv; /* Espaço entre as opções */
+
+    width: 100%; /* Largura total do contêiner pai */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de pointer para interação */
+    transition: background-color 0.3s; /* Transição suave para o hover */
+    margin: 10hv;
+
+    display: flex; /* Habilita o Flexbox */
+    flex-direction: column; /* Alinha em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    height: 30vh; /* Mantém a proporção da imagem */
+}
+
+
+/* Efeito hover */
+.opcao:hover {
+    background-color: #45a049; /* Tom mais escuro no hover */
+}
+
+.op_img{
+    
+     width: 10vh;
+      height: auto; /* Mantém a proporção da imagem */
+}
+
+/* botão sair */
+.sair {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+}
+.shadow {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(5px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.front {
+  display: block;
+  position: relative;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  color: white;
+  background: green;
+  will-change: transform;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.sair:hover {
+  filter: brightness(110%);
+}
+
+.sair:hover .front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+.sair:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.sair:hover .shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+.sair:active .shadow {
+  transform: translateY(0px);
+  transition: transform 34ms;
+}

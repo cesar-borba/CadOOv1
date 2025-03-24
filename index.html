@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CadOO - Gerenciamento de Igrejas</title>
+  <link href="assets/styles/login.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
-  <!--  tela de login -->
-  <div class="login">
+  <main class="login-page">
     <form method="POST" class="formLogin">
 
-      <!--logo-->
-     <div id = "divlogo"><img id = "logo" src="imagens/cadoo.png" alt=""> </div>
-      <!-- fim logo-->
+      <div id = "logotipo"><img width="131" src="assets/images/new-cadoo.svg" alt="Logo CadOO"> </div>
 
-      <!-- Form -->
       <label for="email">E-mail</label>
-      <input type="email" id="email" placeholder="Digite seu e-mail" autofocus="true" required />
-      <label for="password">Senha</label>
+      <input type="email" id="email" placeholder="Digite seu e-mail" autofocus required />
+
+      <label for="senha">Senha</label>
       <input type="password" id = "senha" placeholder="Digite sua senha" />
+
       <a href="/">Esqueci minha senha</a>
+
       <input type="submit" onclick ="logar(); return false" value="Acessar" class="btn" required />
-      <a href="/">Não possui cadastro?</a>
+
+      <a href="/">Deseja se cadastrar?</a>
       <!-- Form -->
-   
-  
-
     </form>
-  </div>
 
-  <!-- script -->
-  <script src="script.js"></script>
+  </main>
+  <footer class="rodape">
+    Desenvolvido por César Borba, Kaue Kenji, João Pedro Cordeiro e Natanael Santana.
+  </footer>
+  <script src="assets/js/login-validacao.js"></script>
 </body>
-
 </html>
